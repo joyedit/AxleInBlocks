@@ -1,0 +1,15 @@
+<Project>
+
+  <!--
+    Local build shim. Kept separate from the .csproj files so that merges from
+    upstream (Vasiliyhop/AxleInBlocks) never conflict here.
+
+    AllowMissingPrunePackageData: .NET SDK 10.0.201 raises NETSDK1226 when the
+    offline prune-package data for Microsoft.NETCore.App is not present. The mod
+    references only local Vintage Story DLLs, so there is nothing to prune.
+  -->
+  <PropertyGroup>
+    <AllowMissingPrunePackageData>true</AllowMissingPrunePackageData>
+  </PropertyGroup>
+
+</Project>
